@@ -3,8 +3,8 @@
     ViewBag.Title = "Home Page";
 }
 <link href="~/Content/Site.css" rel="stylesheet" />
-<ul class="course">
-   
+<div class="course">
+    <ul>
         @foreach (var course in Model.UpCommingCourses)
         {
             <li>
@@ -36,10 +36,10 @@
             </li>
         }
 
-    
-@section scripts
+    </ul>
+    @section scripts
     {
-      <script>
+        <script>
           $(document).ready(function () {
               $(".js-toggel-attendance").click(function (e) {
                   var button = $(e.target);
@@ -66,6 +66,6 @@
               });
 
           });
-      </script>
+        </script>
     }
-</ul>
+</div>
